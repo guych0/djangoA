@@ -11,7 +11,7 @@ class Publicar(models.Model):
                 blank=True, null=True)
 
     def publicacion(self):
-        self.fecha_creacion = timezone.now()
+        self.fecha_publica = timezone.now()
         self.save()
 
     def __str__(self):
