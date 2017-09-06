@@ -4,7 +4,7 @@
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+      
         <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
     </head>
@@ -15,8 +15,8 @@
         <div>
         {% for p in publi %}
         <div class="post">
-          <div class="date">{{p.fecha_publicacion}}</div>
-          <h1><a href="{% url 'blog.views.post_detail' pk=p.pk %}">{{ p.titulo }}</a></h1>
+          <div class="date">{{p.fecha_publica}}</div>
+          <h1>{{ p.titulo }}</h1>
           <p>{{ p.texto|linebreaksbr }}</p>
         </div>
         {% endfor %}
