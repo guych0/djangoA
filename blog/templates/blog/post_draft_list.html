@@ -5,8 +5,9 @@
         <div class="post">
             <p class="date">Fecha publicacion: {{ post.fecha_publica|date:'d-m-Y' }}</p>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titulo }}</a></h1>
-            <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-            <button type="submit" class="save btn btn-default">Guardar</button>
+            <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">eliminar</a>
+            <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">agregar</a>
+            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">editar</a>
             <p>{{ post.texto|truncatechars:200 }}</p>
         </div>
     {% endfor %}
